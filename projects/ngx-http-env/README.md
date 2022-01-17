@@ -6,7 +6,7 @@ Retrieve the environment configuration by HTTP on app startup.
 
 ```bash
 #!/bin/bash
-npm install --save npx-http-env
+npm install --save ngx-http-env
 ````
 
 ## Usage
@@ -20,7 +20,8 @@ Edit the `main.ts` such that the environment is loaded _before_ app startup. Thi
 import { DYNAMIC_ENVIRONMENT, env } from 'ngx-http-env';
 
 // (2) Move the original logic of main.ts to callback of subscribe
-env(environment, url='/assets/environments/environment.json').subscribe(
+const url = '/assets/environments/environment.json';
+env(environment, url).subscribe(
   env => {
 
     // place the orinal logic of main.ts here
