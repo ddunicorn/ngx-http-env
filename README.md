@@ -22,8 +22,8 @@ To use the local build another Angular project, edit the consumers tsconfig.json
     "paths": {
       "ngx-http-env": [
         // Paths are intepreted relative to compilerOptions.baseUrl
-        "<path-to-ngx-http-env>/dist/ngx-my-lib/ngx-http-env",
-        "<path-to-ngx-http-env>/ngx-http-env/dist/ngx-http-env"
+        "<path-to-ngx-http-env>/dist/ngx-http-env",
+        "<path-to-ngx-http-env>/dist/ngx-http-env/ngx-http-env"
       ]
     },
     // ...
