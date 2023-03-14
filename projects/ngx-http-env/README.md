@@ -20,7 +20,7 @@ Edit the `main.ts` such that the environment is loaded _before_ app startup. Thi
 import { DYNAMIC_ENVIRONMENT, env } from 'ngx-http-env';
 
 // (2) Move the original logic of main.ts to callback of subscribe
-const url = '/assets/environments/environment.json';
+const url = '/assets/environments/environment.json?ngsw-bypass=true';
 env(environment, url).subscribe(
   env => {
 

@@ -7,7 +7,7 @@ export const DYNAMIC_ENVIRONMENT = new InjectionToken<DynamicEnvironment>('DYNAM
 
 export function env(
   environment:any, 
-  url:string='/assets/environments/environment.json'
+  url:string='/assets/environments/environment.json?ngsw-bypass=true'
 ): Observable<DynamicEnvironment> {
   return from(fetch(url)).pipe(
     flatMap(x => x.json()),
